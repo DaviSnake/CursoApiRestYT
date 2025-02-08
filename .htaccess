@@ -17,6 +17,7 @@ RewriteCond %{REQUEST_FILENAME} !-f
 RewriteCond %{REQUEST_FILENAME} !-d
 RewriteRule ^(.+?)/?$ index.php?url=$1 [L,QSA]
 
+# Resolver el problema de CORS
 Header set Access-Control-Allow-Origin "*"
 Header set Access-Control-Allow-Methods: "GET, PUT, POST, DELETE, OPTIONS, post, get"
 Header set Access-Control-Max-Age: "3600"
