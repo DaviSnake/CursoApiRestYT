@@ -58,7 +58,7 @@ if($_SERVER['REQUEST_METHOD'] == "GET"){
     //recibimos los datos enviados
     $postBody = file_get_contents("php://input");
     //enviamos datos al manejador
-    $archivo = fopen("log-txt","w");
+    $archivo = fopen("log-txt.txt","w");
     fwrite($archivo, $postBody);
     fclose($archivo);
     $datosArray = $_pacientes->put($postBody, $token);

@@ -150,12 +150,12 @@ class pacientes extends conexion {
         $query = "UPDATE " . $this->table . " SET Nombre ='" . $this->nombre . "',Direccion = '" . $this->direccion . "', DNI = '" . $this->dni . "', CodigoPostal = '" .
         $this->codigoPostal . "', Telefono = '" . $this->telefono . "', Genero = '" . $this->genero . "', FechaNacimiento = '" . $this->fechaNacimiento . "', Correo = '" . $this->correo .
          "' WHERE PacienteId = '" . $this->pacienteid . "'"; 
-        $archivo = fopen("log-txt","a");
+        $archivo = fopen("log-txt.txt","a");
         fwrite($archivo, $query);
         fclose($archivo);
         $resp = parent::nonQuery($query);
 
-        $archivo = fopen("log-txt","a");
+        $archivo = fopen("log-txt.txt","a");
         fwrite($archivo, $resp);
         fclose($archivo);
         

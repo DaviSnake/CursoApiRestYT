@@ -115,7 +115,7 @@ INSERT INTO `usuarios` (`UsuarioId`, `Usuario`, `Password`, `Estado`) VALUES
 CREATE TABLE `usuarios_token` (
   `TokenId` int(11) NOT NULL,
   `UsuarioId` varchar(45) DEFAULT NULL,
-  `Token` varchar(45) DEFAULT NULL,
+  `Token` varchar(255) DEFAULT NULL,
   `Estado` varchar(45) CHARACTER SET armscii8 COLLATE armscii8_general_ci DEFAULT NULL,
   `Fecha` datetime DEFAULT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
